@@ -1,6 +1,6 @@
 # Fontify – Custom Font & UI Enhancer for VS Code
 
-**Fontify** is a Visual Studio Code extension that allows you to inject custom fonts and UI tweaks into VS Code using the **Custom CSS and JS Loader** extension. With Fontify, you can make VS Code more visually appealing, apply personalized fonts across the editor, and tweak UI elements like scrollbars, status bar, and menus.
+**Fontify** is a Visual Studio Code extension by **Avinash Gupta (alias tier3guy)** that allows you to inject custom fonts and UI tweaks into VS Code using the **Custom CSS and JS Loader** extension. With Fontify, you can make VS Code more visually appealing, apply personalized fonts across the editor, and tweak UI elements like scrollbars, status bar, and menus.
 
 > ⚠️ **Note:** This extension requires [Custom CSS and JS Loader](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css) to be installed. Fontify will automatically update your settings to include the necessary CSS file.
 
@@ -22,7 +22,7 @@
 2. Install **Fontify** from VS Code Marketplace or via `.vsix`.
 3. Once installed, Fontify automatically updates your `settings.json` to include the CSS file.
 
-> Fontify stores its CSS in `media/custom-vscode-config.css` inside the extension. It uses absolute file paths for injection.
+> Fontify stores its CSS in `src/css/custom-vscode-config.css` inside the extension. It uses absolute file paths for injection.
 
 ---
 
@@ -81,6 +81,14 @@ npm install
 
 3. Open in VS Code, press `F5` to launch the Extension Development Host.
 4. Use the commands in the palette to test enabling/disabling the extension.
+
+---
+
+## Links & Resources
+
+* **LinkedIn**: [Avinash Gupta (tier3guy)](https://www.linkedin.com/in/tier3guy/)
+* **GitHub Project**: [Fontify](https://github.com/tier3guy/Fontify)
+* **Website**: [tier3guy.com](https://tier3guy.com)
 
 ---
 
