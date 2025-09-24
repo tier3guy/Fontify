@@ -1,15 +1,21 @@
 import * as vscode from 'vscode';
-import { EnableFontify, DisableFontify } from './utils';
+import { EnableFontify, DisableFontify, SetCustomCSSEnabled } from './utils';
 
 export async function activate(context: vscode.ExtensionContext) {
 	console.log('Fontify extension is now active!');
 
+	await SetCustomCSSEnabled(true);
+	await EnableFontify(context);
+	vscode.window.showInformationMessage('Fontify is now enabled! Please reload to apply changes.');
+	
 	const disposableEnable = vscode.commands.registerCommand('fontify.enable', async () => {
+		await SetCustomCSSEnabled(true);
 		await EnableFontify(context);
 		vscode.window.showInformationMessage('Fontify is now enabled! Please reload to apply changes.');
 	});
 
 	const disposableDisable = vscode.commands.registerCommand('fontify.disable', async () => {
+		await SetCustomCSSEnabled(true);
 		await DisableFontify(context);
 		vscode.window.showInformationMessage('Fontify is now disabled! Please reload to apply changes.');
 	});

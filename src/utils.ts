@@ -18,6 +18,25 @@ export function GetCSSFilePath(context: vscode.ExtensionContext): string {
     ).toString(true);
 };
 
+export async function SetCustomCSSEnabled(enabled: boolean) {
+    const extension = vscode.extensions.getExtension('be5invis.vscode-custom-css');
+    if (!extension) {
+        vscode.window.showWarningMessage('Custom CSS and JS Loader extension is not installed.');
+        return;
+    }
+
+    if (!extension.isActive) {
+        await extension.activate();
+    }
+
+    // Enable/Disable the extension via its commands
+    const command = enabled 
+        ? 'vscode_custom_css.enable' 
+        : 'vscode_custom_css.disable';
+
+    await vscode.commands.executeCommand(command);
+}
+
 export async function EnableFontify(context: vscode.ExtensionContext) {
     const cssFilePath = GetCSSFilePath(context);
 
