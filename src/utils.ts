@@ -25,14 +25,12 @@ export async function SetCustomCSSEnabled(enabled: boolean) {
         return;
     }
 
-    if (!extension.isActive) {
-        await extension.activate();
-    }
+    await extension.activate();
 
     // Enable/Disable the extension via its commands
     const command = enabled 
-        ? 'vscode_custom_css.enable' 
-        : 'vscode_custom_css.disable';
+        ? 'extension.installCustomCSS' 
+        : 'extension.uninstallCustomCSS';
 
     await vscode.commands.executeCommand(command);
 }

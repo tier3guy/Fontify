@@ -4,6 +4,13 @@ All notable changes to the "Fontify" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.5] - 2025-09-24
+### Added
+- Improved enable/disable logic for Fontify commands.
+- Now enables/disables the required Custom CSS Loader extension automatically.
+- User is prompted to reload after enabling/disabling Fontify.
+- Improved messaging and error handling if dependencies are missing.
+
 ## [0.0.4]
 - Updated for VS Code 1.104.0 compatibility.
 - Improved extension activation and command registration.
