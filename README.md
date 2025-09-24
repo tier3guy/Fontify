@@ -1,71 +1,95 @@
-# fontify README
+# Fontify – Custom Font & UI Enhancer for VS Code
 
-This is the README for your extension "fontify". After writing up a brief description, we recommend including the following sections.
+**Fontify** is a Visual Studio Code extension that allows you to inject custom fonts and UI tweaks into VS Code using the **Custom CSS and JS Loader** extension. With Fontify, you can make VS Code more visually appealing, apply personalized fonts across the editor, and tweak UI elements like scrollbars, status bar, and menus.
 
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+> ⚠️ **Note:** This extension requires [Custom CSS and JS Loader](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css) to be installed. Fontify will automatically update your settings to include the necessary CSS file.
 
 ---
 
-## Following extension guidelines
+## Features
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+* Apply the **Inter** font across VS Code interface.
+* Customize font weights and styles for editors, menus, status bar, and notifications.
+* Add custom icons/emojis to headers and panels.
+* Tweak scrollbars and UI components for a cleaner look.
+* Enable or disable the extension dynamically via commands.
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+---
 
-## Working with Markdown
+## Installation
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+1. Install **Custom CSS and JS Loader** extension from the [Marketplace](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css).
+2. Install **Fontify** from VS Code Marketplace or via `.vsix`.
+3. Once installed, Fontify automatically updates your `settings.json` to include the CSS file.
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+> Fontify stores its CSS in `media/custom-vscode-config.css` inside the extension. It uses absolute file paths for injection.
 
-## For more information
+---
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+## Usage
 
-**Enjoy!**
+After installing:
+
+1. Open the **Command Palette** (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac).
+2. Run either command:
+
+   * `Fontify: Enable` – Injects the CSS and prompts to reload VS Code.
+   * `Fontify: Disable` – Removes the CSS and prompts to reload VS Code.
+
+> Make sure to reload VS Code when prompted for changes to take effect.
+
+---
+
+### CSS Tweaks Included
+
+* **Fonts**: Inter font applied globally across editors, menus, labels, and notifications.
+* **Headers**: Emoji icons added to panel headers.
+* **Scrollbars**: Slim, minimalistic scrollbars.
+* **Backgrounds**: Optional watermark/letterpress style backgrounds.
+* **Shortcuts**: Hides default shortcut overlays for a cleaner look.
+
+---
+
+## Commands
+
+| Command           | Description                   |
+| ----------------- | ----------------------------- |
+| `fontify.enable`  | Enable Fontify CSS injection  |
+| `fontify.disable` | Disable Fontify CSS injection |
+
+---
+
+## Technical Details
+
+* **VS Code API**: Uses `vscode.workspace.getConfiguration()` and `vscode.ConfigurationTarget.Global` to manage settings.
+* **File Injection**: The CSS file is stored inside the extension and injected via absolute URI path.
+* **Path Handling**: `vscode.Uri.file(context.extensionPath, ...)` ensures cross-platform path resolution.
+* **Prompt**: Reload is prompted automatically after enabling/disabling.
+
+---
+
+## Development
+
+To run locally:
+
+1. Clone the repo.
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Open in VS Code, press `F5` to launch the Extension Development Host.
+4. Use the commands in the palette to test enabling/disabling the extension.
+
+---
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests for bug fixes, new features, or UI improvements.
+
+---
+
+## License
+
+MIT License – see `LICENSE` file for details.
