@@ -32,6 +32,9 @@ importers:
       eslint:
         specifier: ^9.34.0
         version: 9.36.0
+      mocha:
+        specifier: ^11.7.2
+        version: 11.7.2
       typescript:
         specifier: ^5.9.2
         version: 5.9.2

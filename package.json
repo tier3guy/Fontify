@@ -6,6 +6,9 @@
   "engines": {
     "vscode": "^1.104.0"
   },
+  "extensionDependencies": [
+    "be5invis.vscode-custom-css"
+  ],
   "categories": [
     "Other"
   ],
@@ -14,11 +17,19 @@
   "contributes": {
     "commands": [
       {
-        "command": "fontify.helloWorld",
-        "title": "Hello World"
+        "command": "fontify.enable",
+        "title": "Enable Fontify"
+      },
+      {
+        "command": "fontify.disable",
+        "title": "Disable Fontify"
       }
     ]
   },
+  "files": [
+    "out",
+    "src/css"
+  ],
   "scripts": {
     "vscode:prepublish": "pnpm run compile",
     "compile": "tsc -p ./",
@@ -28,14 +39,15 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.104.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "22.x",
+    "@types/vscode": "^1.104.0",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
-    "eslint": "^9.34.0",
-    "typescript": "^5.9.2",
     "@vscode/test-cli": "^0.0.11",
-    "@vscode/test-electron": "^2.5.2"
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.34.0",
+    "mocha": "^11.7.2",
+    "typescript": "^5.9.2"
   }
 }
