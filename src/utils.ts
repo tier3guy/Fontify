@@ -25,7 +25,7 @@ export async function EnableFontify(context: vscode.ExtensionContext) {
 	
 	if (!currentImports.includes(cssFilePath)) {
 		currentImports.push(cssFilePath);
-		config.update(
+		await config.update(
 			configSection, 
 			currentImports, 
 			vscode.ConfigurationTarget.Global

@@ -28,7 +28,7 @@
   },
   "files": [
     "out",
-    "src/css"
+    "media"
   ],
   "scripts": {
     "vscode:prepublish": "pnpm run compile",
