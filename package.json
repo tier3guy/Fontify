@@ -31,10 +31,6 @@
       }
     ]
   },
-  "files": [
-    "out",
-    "media"
-  ],
   "scripts": {
     "vscode:prepublish": "pnpm run compile",
     "compile": "tsc -p ./",
