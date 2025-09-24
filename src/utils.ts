@@ -12,10 +12,14 @@ export function PromptReload() {
     });
 };
 
+export function GetCSSFilePath(context: vscode.ExtensionContext): string {
+    return vscode.Uri.file(
+        path.join(context.extensionPath, 'media', 'custom-vscode-config.css')
+    ).toString(true);
+};
+
 export async function EnableFontify(context: vscode.ExtensionContext) {
-    const cssFilePath = vscode.Uri.file(
-		path.join(context.extensionPath, 'src', 'css', 'custom-vscode-config.css')
-	).toString();
+    const cssFilePath = GetCSSFilePath(context);
 
 	console.log('CSS File Path:', cssFilePath);
 
@@ -33,12 +37,10 @@ export async function EnableFontify(context: vscode.ExtensionContext) {
 
 		PromptReload();
 	}
-}
+};
 
 export async function DisableFontify(context: vscode.ExtensionContext) {
-    const cssFilePath = vscode.Uri.file(
-        path.join(context.extensionPath, 'src', 'css', 'custom-vscode-config.css')
-    ).toString();
+    const cssFilePath = GetCSSFilePath(context);
 
     const configSection = 'vscode_custom_css.imports';
     const config = vscode.workspace.getConfiguration();
@@ -54,4 +56,4 @@ export async function DisableFontify(context: vscode.ExtensionContext) {
         
         PromptReload();
     }
-}
+};
