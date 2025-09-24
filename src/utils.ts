@@ -3,10 +3,10 @@ import * as vscode from 'vscode';
 
 export function PromptReload() {
     vscode.window.showInformationMessage(
-        'Reload required to activate this extension.',
-        'Reload Window'
+        'Restart required to activate Fontify.',
+        'Restart Window'
     ).then(selection => {
-        if (selection === 'Reload Window') {
+        if (selection === 'Restart Window') {
             vscode.commands.executeCommand('workbench.action.reloadWindow');
         }
     });
