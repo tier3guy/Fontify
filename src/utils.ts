@@ -29,7 +29,7 @@ export async function PromptRestart() {
 export function GetCSSFilePath(context: vscode.ExtensionContext): string {
     return vscode.Uri.file(
         path.join(context.extensionPath, 'media', 'custom-vscode-config.css')
-    ).toString(true);
+    ).toString(true).toLowerCase();
 };
 
 export async function SetCustomCSSEnabled(enabled: boolean) {
