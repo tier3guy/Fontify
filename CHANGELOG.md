@@ -23,3 +23,14 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Extension activation and command registration.
 - Stricter TypeScript and ESLint configuration.
 - Dependency on Custom CSS and JS Loader extension.
+
+## [0.2.0] - 2025-09-26
+### Added
+- Improved enable/disable logic for Fontify commands.
+- Now enables/disables the required Custom CSS Loader extension automatically.
+- User is prompted to reload after enabling/disabling Fontify.
+- Improved messaging and error handling if dependencies are missing.
+
+### Changed
+- Updated for compatibility with VS Code 1.104.0.
+- Updated dependencies and devDependencies.
