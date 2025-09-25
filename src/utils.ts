@@ -1,7 +1,7 @@
 import * as path from 'path';
 import * as vscode from 'vscode';
 
-export function PromptReload() {
+export function PromptRestart() {
     vscode.window.showInformationMessage(
         'Restart required to activate Fontify.',
         'Restart Window'
@@ -52,7 +52,7 @@ export async function EnableFontify(context: vscode.ExtensionContext) {
 			vscode.ConfigurationTarget.Global
 		);
 
-		PromptReload();
+		PromptRestart();
 	}
 };
 
@@ -71,6 +71,6 @@ export async function DisableFontify(context: vscode.ExtensionContext) {
             vscode.ConfigurationTarget.Global
         );
         
-        PromptReload();
+        PromptRestart();
     }
 };

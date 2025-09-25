@@ -10,26 +10,31 @@
 .pane-header,
 /* Search Bar */
 .search-label,
+/* Dropdowns */
+.monaco-dropdown,
 /* Explore Bar */
 .composite.title,
 /* Notification Popup */
 .notification-toast,
-/* Status Bar: Git Branch, Launchpad, Go Live etc. */
-.statusbar-item-label,
 /* Quick Filter: File Search */
 .quick-input-header,
+/* Status Bar: Git Branch, Launchpad, Go Live etc. */
+.statusbar-item-label,
 /* Files & Folders */
 .monaco-highlighted-label,
 /* Source Control: Commit Message Input Box */
 .scm-input *:not(.codicon),
 /* All the scrollable items over the application */
 .monaco-scrollable-element,
+/* Show host (dropdowns for GH Co-pilot icon) */
+.shadow-root-host, .shadow-root-host *,
 /* Suggest widget input box in the Settings tab */
 .suggest-input-container *:not(.codicon),
 /* Menubar: File, Edit, View etc. excluding icons */
 .menubar-menu-title:not(.toolbar-toggle-more),
 /* Github Copilot: Input Box */
-.chat-input-container *:not(.chat-attachments-container):not(.chat-attachments-container *) {
+.chat-input-container *:not(.chat-attachments-container):not(.chat-attachments-container *):not(.codicon):not(.codicon *)
+{
   font-style: normal;
   font-optical-sizing: auto;
   font-family: "Inter" !important;
