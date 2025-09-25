@@ -1,16 +1,30 @@
 import * as path from 'path';
 import * as vscode from 'vscode';
 
-export function PromptRestart() {
-    vscode.window.showInformationMessage(
-        'Restart required to activate Fontify.',
-        'Restart Window'
-    ).then(selection => {
-        if (selection === 'Restart Window') {
-            vscode.commands.executeCommand('workbench.action.reloadWindow');
-        }
-    });
-};
+// export function PromptRestart() {
+//     vscode.window.showInformationMessage(
+//         'Restart required to activate Fontify.',
+//         'Restart Window'
+//     ).then(selection => {
+//         if (selection === 'Restart Window') {
+//             vscode.commands.executeCommand('workbench.action.reloadWindow');
+//         }
+//     });
+// };
+
+export async function PromptRestart() {
+  const config = vscode.workspace.getConfiguration();
+  const titleBarStyle = config.inspect("window.titleBarStyle");
+
+  if (titleBarStyle) {
+    const currentStyle = config.get("window.titleBarStyle");
+    const _style = currentStyle === "native" ? "custom" : "native";
+
+    await config.update("window.titleBarStyle", _style, vscode.ConfigurationTarget.Global);
+    await config.update("window.titleBarStyle", titleBarStyle.globalValue, vscode.ConfigurationTarget.Global);
+  }
+}
+
 
 export function GetCSSFilePath(context: vscode.ExtensionContext): string {
     return vscode.Uri.file(
