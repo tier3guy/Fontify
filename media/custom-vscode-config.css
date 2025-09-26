@@ -32,6 +32,8 @@
 .suggest-input-container *:not(.codicon),
 /* Menubar: File, Edit, View etc. excluding icons */
 .menubar-menu-title:not(.toolbar-toggle-more),
+/* Dialog Box */
+.monaco-dialog-box *:not(.codicon):not(.codicon *),
 /* Github Copilot: Input Box */
 .chat-input-container *:not(.chat-attachments-container):not(.chat-attachments-container *):not(.codicon):not(.codicon *)
 {

@@ -4,7 +4,7 @@
   "publisher": "tier3guy",
   "description": "Effortlessly transform the entire VS Code interface font to the sleek, modern 'Inter' typeface using custom CSS injection. Fontify makes your coding environment clean, stylish, and easy on the eyes.",
   "icon": "media/icon.png",
-  "version": "0.2.3",
+  "version": "0.2.5",
   "repository": {
     "type": "git",
     "url": "https://github.com/tier3guy/Fontify"

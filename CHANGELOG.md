@@ -34,3 +34,18 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ### Changed
 - Updated for compatibility with VS Code 1.104.0.
 - Updated dependencies and devDependencies.
+
+## [0.2.5] - 2025-09-27
+### Added
+- Further improved enable/disable logic for Fontify commands.
+- Enhanced CSS selectors for broader font coverage across the VS Code interface.
+- Updated extension metadata and documentation.
+
+### Changed
+- Updated for compatibility with VS Code 1.104.0.
+- Updated dependencies and devDependencies.
+- Minor improvements to extension activation and command registration.
+
+### Fixed
+- Improved error handling when required dependencies are missing.
+- Minor bug fixes in CSS injection and settings management.
