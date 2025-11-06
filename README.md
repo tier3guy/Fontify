@@ -56,7 +56,7 @@ This stylesheet overrides default styles — including fonts, scrollbars, header
 The injected file lives at:
 ```
 
-src/css/custom-vscode-config.css
+media/custom-vscode-config.css
 
 ````
 
@@ -100,7 +100,7 @@ You can modify or replace it manually via the injected CSS file:
 
 ### 🔧 Example: Change the Global Font
 
-Edit `src/css/custom-vscode-config.css`:
+Edit `media/custom-vscode-config.css`:
 ```css
 :root {
   --vscode-font-family: 'Fira Code', monospace !important;
