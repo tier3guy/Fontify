@@ -203,7 +203,8 @@ Fontify only applies the CSS — it doesn’t download the font automatically.
 ```
 Fontify/
  ┣ media/
- ┃ ┗ custom-vscode-config.css   # Injected stylesheet
+ ┃ ┗ custom-vscode-config.css   # Injected general UI stylesheet
+ ┃ ┗ custom-vscode-config.css   # Injected emojis stylesheet
  ┣ src/
  ┃ ┣ test/
  ┃ ┣ extension.ts                 # Core logic (enable/disable commands)
