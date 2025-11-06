@@ -13,6 +13,7 @@
 * Add custom icons/emojis to headers and panels.
 * Tweak scrollbars and UI components for a cleaner look.
 * Enable or disable the extension dynamically via commands.
+* Show or hide the emojis next to titles.
 
 ---
 
@@ -33,6 +34,10 @@ After installing:
 
    * `Enable Fontify` – Injects the CSS and prompts to restart VS Code.  
    * `Disable Fontify` – Removes the CSS and prompts to restart VS Code.  
+2. Personalize your experience with these commands:
+
+   * `Fontify: Enable Emojis` - Shows the emojis next to titles
+   * `Fontify: Disable Emojis` - Hides the emojis next to titles
 
 > Make sure to restart VS Code when prompted for changes to take effect.
 
@@ -50,10 +55,12 @@ After installing:
 
 ## Commands
 
-| Command           | Description                   |
-| ----------------- | ----------------------------- |
-| `fontify.enable`  | Enable Fontify CSS injection  |
-| `fontify.disable` | Disable Fontify CSS injection |
+| Command                 | Description                   |
+| ----------------------- | ----------------------------- |
+| `fontify.enable`        | Enable Fontify CSS injection  |
+| `fontify.disable`       | Disable Fontify CSS injection |
+| `fontify.enableEmojis`  | Shows emojis next to titles   |
+| `fontify.disableEmojis` | Hides emojis next to titles   |
 
 ---
 

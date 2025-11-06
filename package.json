@@ -32,11 +32,11 @@
       },
       {
         "command": "fontify.enableEmojis",
-        "title": "Enable Emojis"
+        "title": "Fontify: Enable Emojis"
       },
       {
         "command": "fontify.disableEmojis",
-        "title": "Disable Emojis"
+        "title": "Fontify: Disable Emojis"
       }
     ],
     "menus": {
