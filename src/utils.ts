@@ -19,6 +19,12 @@ export function GetCSSFilePath(context: vscode.ExtensionContext): string {
     ).toString(true).toLowerCase();
 };
 
+export function GetEmojiCSSFilePath(context: vscode.ExtensionContext): string {
+    return vscode.Uri.file(
+        path.join(context.extensionPath, 'media', 'emoji.css')
+    ).toString(true).toLowerCase();
+};
+
 export async function SetCustomCSSEnabled(enabled: boolean) {
     const extension = vscode.extensions.getExtension('be5invis.vscode-custom-css');
     if (!extension) {
@@ -73,5 +79,39 @@ export async function DisableFontify(context: vscode.ExtensionContext) {
         );
         
         // PromptRestart();
+    }
+};
+
+export async function EnableEmojis(context: vscode.ExtensionContext) {
+    const emojiCssPath = GetEmojiCSSFilePath(context);
+
+    const configSection = 'vscode_custom_css.imports';
+    const config = vscode.workspace.getConfiguration();
+    const currentImports = (config.get(configSection) as string[]) || [];
+
+    if (!currentImports.includes(emojiCssPath)) {
+        currentImports.push(emojiCssPath);
+        await config.update(
+            configSection,
+            currentImports,
+            vscode.ConfigurationTarget.Global
+        );
+    }
+};
+
+export async function DisableEmojis(context: vscode.ExtensionContext) {
+    const emojiCssPath = GetEmojiCSSFilePath(context);
+
+    const configSection = 'vscode_custom_css.imports';
+    const config = vscode.workspace.getConfiguration();
+    const currentImports = (config.get(configSection) as string[]) || [];
+    const updatedImports = currentImports.filter(p => p !== emojiCssPath);
+
+    if (updatedImports.length !== currentImports.length) {
+        await config.update(
+            configSection,
+            updatedImports,
+            vscode.ConfigurationTarget.Global
+        );
     }
 };

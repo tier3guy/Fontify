@@ -75,6 +75,8 @@ After installation:
 |----------|--------|
 | `Enable Fontify` | Injects Fontify’s CSS and prompts you to restart VS Code. |
 | `Disable Fontify` | Removes the injected CSS and restores the default UI. |
+| `Fontify: Enable Emojis`  | Shows emojis next to titles. |
+| `Fontify: Disable Emojis` | Hides emojis next to titles. |
 
 > 💡 Restart VS Code when prompted to apply or remove changes.
 
@@ -138,10 +140,12 @@ body, .monaco-editor, .part.editor, .monaco-workbench {
 
 ## 🧩 Commands
 
-| Command ID        | Command Name        | Description                       |
-| ----------------- | ------------------- | --------------------------------- |
-| `fontify.enable`  | **Enable Fontify**  | Injects CSS and restarts VS Code. |
-| `fontify.disable` | **Disable Fontify** | Removes CSS and restarts VS Code. |
+| Command ID              | Command Name                | Description                       |
+| ----------------------- | --------------------------- | --------------------------------- |
+| `fontify.enable`        | **Enable Fontify**          | Injects CSS and restarts VS Code. |
+| `fontify.disable`       | **Disable Fontify**         | Removes CSS and restarts VS Code. |
+| `fontify.enableEmojis`  | **Fontify: Enable Emojis**  | Shows emojis next to titles.      |
+| `fontify.disableEmojis` | **Fontify: Disable Emojis** | Hides emojis next to titles.      |
 
 ---
 

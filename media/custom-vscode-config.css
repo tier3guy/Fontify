@@ -49,19 +49,7 @@
   font-weight: 600 !important;
 }
 
-.composite.title h2::before {
-  content: "🔥";
-  margin-right: 3px;
-  font-size: 0.8rem;
-  display: inline-block;
-}
-
-.pane-header h3.title::before {
-  content: "🚀";
-  margin-right: 3px;
-  font-size: 0.8rem;
-  display: inline-block;
-}
+/* Emoji decorations have been moved to media/emoji.css and can be toggled via commands */
 
 /* ---------------------------- Scrollbar Settings ---------------------------- */
 
