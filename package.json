@@ -29,6 +29,14 @@
       {
         "command": "fontify.disable",
         "title": "Disable Fontify"
+      },
+      {
+        "command": "fontify.enableEmojis",
+        "title": "Enable Emojis"
+      },
+      {
+        "command": "fontify.disableEmojis",
+        "title": "Disable Emojis"
       }
     ],
     "menus": {
@@ -39,6 +47,14 @@
         },
         {
           "command": "fontify.disable",
+          "when": "true"
+        },
+        {
+          "command": "fontify.enableEmojis",
+          "when": "true"
+        },
+        {
+          "command": "fontify.disableEmojis",
           "when": "true"
         }
       ]
